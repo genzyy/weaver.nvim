@@ -1,5 +1,5 @@
 <div align=center>
-  <h1>weaver.nvim</h1>
+  <h1>✏️ weaver.nvim</h1>
 </div>
 
 <img src="./assets/screenshot.png" alt="screenshot" />
