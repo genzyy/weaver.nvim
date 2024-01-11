@@ -48,19 +48,19 @@ return {
 
 ## Usage and commands
 
-- `Weaver`: Open a weaver attached to current buffer. This will remember the contents as long as the session is maintained and cannot be used in any other buffer.
+- `:Weaver`: Open a weaver attached to current buffer. This will remember the contents as long as the session is maintained and cannot be used in any other buffer.
 
-- `CloseWeaver`: Close weaver that is attached to current buffer.
+- `:CloseWeaver`: Close weaver that is attached to current buffer.
 
-- `Weaver g`: Same as first command but with "g" passed as argument. This will create a global weaver that is not attached to any current nvim buffers and can be opened with any buffer in the session.
+- `:Weaver g`: Same as first command but with "g" passed as argument. This will create a global weaver that is not attached to any current nvim buffers and can be opened with any buffer in the session.
 
-- `CloseWeaver g`: Close global weaver.
+- `:CloseWeaver g`: Close global weaver.
 
-- `ToggleWeaver`: A toggle command to open/close weaver. Pass `g` as argument to toggle global weaver.
+- `:ToggleWeaver`: A toggle command to open/close weaver. Pass `g` as argument to toggle global weaver.
 
 
 ## ToDo
 
-- [] Make UI better (maybe custom popup?)
-- [] Better code quality
-- [] Formatting and highlighting for weaver contents (markdown support?)
+- [ ] Make UI better (maybe custom popup?)
+- [ ] Better code quality
+- [ ] Formatting and highlighting for weaver contents (markdown support?)
