@@ -16,23 +16,13 @@ Rquirements:
  - neovim >= 0.7.0
  - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) (you can add it as a dependency while installing)
 
-Using [vim-plug](https://github.com/junegunn/vim-plug)
-```viml
-Plug 'nvim-lua/plenary.nvim'
-Plug `genzyy/weaver.nvim`
-```
-
-Using [dein](https://github.com/Shougo/dein.vim)
-```viml
-call dein#add('nvim-lua/plenary.nvim')
-cal dein#add('genzyy/weaver.nvim')
-```
 
 Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
 ```lua
 use {
   "genzyy/weaver.nvim",
-  requires = {"nvim-lua/plenary.nvim"}
+  requires = {"nvim-lua/plenary.nvim"},
+  config = true,
 }
 ```
 
@@ -42,7 +32,8 @@ return {
   "genzyy/weaver.nvim",
   dependencies = {
    "nvim-lua/plenary.nvim"
-  }
+  },
+  config = true,
 }
 ```
 
