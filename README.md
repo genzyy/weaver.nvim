@@ -6,6 +6,11 @@
 
 Simple note taking app for neovim that can be attached to buffers, or can be made global.
 
+## Latest release
+
+**v1.0.0**
+Add support for destroying weaver either global or the one attached to active buffer.
+
 ## About
 
 This is a simple note taking plugin that creates temporary buffers that can be attached to separate buffers or create a single global buffer. Initially, I designed the plugin for myself, but I will be spending some time to update and modify it for others, refer [TODO](#todo) section for more.
@@ -27,6 +32,20 @@ use {
 ```
 
 Using [lazy.nvim](https://github.com/folke/lazy.nvim)
+
+```lua
+return {
+    "genzyy/weaver.nvim",
+    dependencies = {
+   "nvim-lua/plenary.nvim"
+    },
+    config = function()
+        require("weaver").setup()
+    end,
+}
+```
+
+Using [LazyVim](https://github.com/LazyVim/LazyVim)
 ```lua
 return {
   "genzyy/weaver.nvim",
