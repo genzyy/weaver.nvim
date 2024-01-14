@@ -19,7 +19,7 @@ end
 
 --- @param is_global boolean | nil
 M.open_weaver = function(is_global)
-    local curr_buf = nil
+    local curr_buf
     if is_global == true then
         curr_buf = 0
     else
@@ -54,7 +54,7 @@ M.close_weaver = function(is_global)
     weaver._is_window_open = false
     local buf_content = M.get_buffer_lines()
     ui.close_window()
-    local curr_buf = nil
+    local curr_buf
     if is_global == true then
         curr_buf = 0
     else
@@ -65,7 +65,7 @@ end
 
 --- @param is_global boolean
 M.destroy_weaver = function(is_global)
-    local curr_buf = nil
+    local curr_buf
     if is_global == true then
         curr_buf = 0
     else
