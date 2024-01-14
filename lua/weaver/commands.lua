@@ -36,7 +36,7 @@ command("ToggleWeaver", function(cargs)
     end
 end, default_opts)
 
-command("DestroyWeave", function()
+command("DestroyWeave", function(cargs)
     local args = cargs.fargs
     local is_global = args[1] == "g"
 
