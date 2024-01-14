@@ -10,6 +10,7 @@ Simple note taking app for neovim that can be attached to buffers, or can be mad
 
 **v1.0.0**
 Add support for destroying weaver either global or the one attached to active buffer.
+
 `:DestroyWeaver`: Destroy *weaver* that is currently attached to active buffer, or pass `g` to destroy global weaver.
 
 ## About
@@ -68,6 +69,8 @@ return {
 - `:CloseWeaver g`: Close global weaver.
 
 - `:ToggleWeaver`: A toggle command to open/close weaver. Pass `g` as argument to toggle global weaver.
+
+- `:DestroyWeaver`: Destroy *weaver* that is currently attached to active buffer, or pass `g` to destroy global weaver.
 
 
 ## ToDo
