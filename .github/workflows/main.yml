@@ -20,7 +20,7 @@ jobs:
         uses: nebularg/actions-luacheck@v1
         with:
           files: .
-          annotate: warning
+          annotate: "none"
 
   format:
     name: Format

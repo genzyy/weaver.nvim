@@ -33,7 +33,7 @@ M.open_weaver = function(is_global)
 
     weaver._is_window_open = true
     local win_opts = {}
-    local cb = function(_, sel) end
+    local cb = function(_, _sel) end
     bufnr = ui.show_window(win_opts, cb)
     vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, contents)
     local quit_command = ":CloseWeaver"
