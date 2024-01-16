@@ -10,8 +10,7 @@ local win = nil
 --- @param win_title string?
 --- @return integer
 function M.show_window(opts, cb, height, width, win_title)
-  local borderchars =
-  { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }
+  local borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }
 
   win = popup.create(opts, {
     title = win_title ~= nil and win_title ~= "" and win_title or "Weaver",

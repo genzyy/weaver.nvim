@@ -22,7 +22,7 @@ function M.setup(win_properties)
       height = win_properties.height or M.win_properties.height,
       width = win_properties.width or M.win_properties.width,
       use_filename_as_weaver_title = win_properties.use_filename_as_weaver_title
-          or M.win_properties.use_filename_as_weaver_title,
+        or M.win_properties.use_filename_as_weaver_title,
     }
   end
   require("weaver.commands")
