@@ -2,16 +2,18 @@ local popup = require("plenary.popup")
 local M = {}
 
 local win = nil
-local win_config = {
-    height = 30,
-    width = 90,
-    borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
-}
 
 --- @param opts table
 --- @param cb function
+--- @param height integer
+--- @param width integer
 --- @return integer
-M.show_window = function(opts, cb)
+M.show_window = function(opts, cb, height, width)
+    win_config = {
+        height = height,
+        width = width,
+        borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+    }
     win = popup.create(opts, {
         title = "Weaver",
         highlight = "WeaverWindow",

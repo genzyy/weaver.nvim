@@ -34,7 +34,12 @@ M.open_weaver = function(is_global)
     weaver._is_window_open = true
     local win_opts = {}
     local cb = function(_, _sel) end
-    bufnr = ui.show_window(win_opts, cb)
+    bufnr = ui.show_window(
+        win_opts,
+        cb,
+        weaver.custom_window_config.height,
+        weaver.custom_window_config.width
+    )
     vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, contents)
     local quit_command = ":CloseWeaver"
     if is_global == true then
