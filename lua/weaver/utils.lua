@@ -17,24 +17,22 @@ function M.get_current_buffer()
   return vim.api.nvim_get_current_buf()
 end
 
---- @param is_global boolean | nil
+--- @param is_global boolean?
 function M.open_weaver(is_global)
+  --- @type integer?
   local curr_buf
   if is_global == true then
     curr_buf = 0
   else
     curr_buf = M.get_current_buffer()
   end
-  local contents = buf_map[M._format_index(curr_buf)]
-
-  if contents == nil then
-    contents = {}
-  end
+  local contents = buf_map[M._format_index(curr_buf)] or {}
 
   weaver._is_window_open = true
   local win_opts = {}
   local cb = function(_, _sel) end
 
+  --- @type string?
   local win_title
 
   if is_global then
@@ -64,11 +62,12 @@ function M.open_weaver(is_global)
   )
 end
 
---- @param is_global boolean | nil
+--- @param is_global boolean?
 function M.close_weaver(is_global)
   weaver._is_window_open = false
   local buf_content = M.get_buffer_lines()
   ui.close_window()
+  --- @type integer?
   local curr_buf
   if is_global == true then
     curr_buf = 0
