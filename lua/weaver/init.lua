@@ -25,7 +25,7 @@ function Weaver:new()
 end
 
 --- @param win_properties WinProperties?
-function Weaver:setup(win_properties)
+function Weaver.setup(win_properties)
   if win_properties then
     Weaver.win_properties = {
       height = win_properties.height or Weaver.win_properties.height,
@@ -35,6 +35,11 @@ function Weaver:setup(win_properties)
     }
   end
   require("weaver.commands")
+end
+
+--- @return WinProperties
+function Weaver:cfg()
+  return self.win_properties -- print window properties
 end
 
 function Weaver:_clear()
