@@ -19,6 +19,7 @@ end
 
 --- @param is_global boolean?
 function M.open_weaver(is_global)
+  --- @type integer?
   local curr_buf
   if is_global == true then
     curr_buf = 0
@@ -31,6 +32,7 @@ function M.open_weaver(is_global)
   local win_opts = {}
   local cb = function(_, _sel) end
 
+  --- @type string?
   local win_title
 
   if is_global then
@@ -65,6 +67,7 @@ function M.close_weaver(is_global)
   weaver._is_window_open = false
   local buf_content = M.get_buffer_lines()
   ui.close_window()
+  --- @type integer?
   local curr_buf
   if is_global == true then
     curr_buf = 0
